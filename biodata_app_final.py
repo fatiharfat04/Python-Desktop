@@ -127,7 +127,7 @@ label_judul = tk.Label(master=main_frame, text="FORM BIODATA MAHASISWA", font=("
 label_judul.grid(row=0, column=0, columnspan=2, pady=20)
 
 # -- Frame Input (Grup ber-border) --
-frame_input = tk.Frame(master=main_frame, relief=tk.GROOVE, borderwidth=2, padx=10, pady=10)
+frame_input = tk.Frame(master=main_frame, relief=tk.GROOVE, borderwidth=3, padx=10, pady=10)
 frame_input.grid(row=1, column=0, columnspan=2, sticky="EW")
 frame_input.grid_columnconfigure(1, weight=1) # Agar Entry bisa expand/melebar
 
