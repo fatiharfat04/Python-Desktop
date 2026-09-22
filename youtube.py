@@ -4,7 +4,7 @@ from tkinter.ttk import *
 
 window = Tk()
 window.title("YouTube")
-window.geometry("400x300")
+window.geometry("400x350")
 
 combo = Combobox(window)
 combo['values'] = ("Java", "Python", "C++", "C#", "JavaScript", "HTML", "CSS")
@@ -23,5 +23,9 @@ learn_btn.grid(row=0, column=1, padx=10, pady=10)
 paragraph = Label(window, font=("ariel", 10))
 paragraph.config(text="the choosen one will appear here!")
 paragraph.grid(row=2, column=0, padx=10, pady=10)
+
+footer = Label(window)
+footer.grid(row=3, column=0, padx=10, pady=10)
+footer.config(text="This program is created by pteeehhh still improve")
 
 window.mainloop()
