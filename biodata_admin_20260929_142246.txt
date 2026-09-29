@@ -1,0 +1,11 @@
+Data disimpan oleh: admin
+Waktu penyimpanan: 2026-09-29 14:22:46
+--------------------------------------------------
+BIODATA TERSIMPAN:
+Diinput oleh: admin
+
+Nama: admin
+NIM: 12345678
+Jurusan: kaka
+Alamat: laam
+Jenis Kelamin: Pria
