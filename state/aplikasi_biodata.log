@@ -1,0 +1,41 @@
+2026-10-01 12:58:41 - INFO - Login attempt for username: admin
+2026-10-01 12:58:41 - INFO - Successful login for user: admin
+2026-10-01 12:59:03 - INFO - Login attempt for username: admin
+2026-10-01 12:59:03 - INFO - Successful login for user: admin
+2026-10-01 12:59:46 - INFO - Login attempt for username: admin
+2026-10-01 12:59:46 - INFO - Successful login for user: admin
+2026-10-01 13:00:30 - INFO - Login attempt for username: admin
+2026-10-01 13:00:30 - INFO - Successful login for user: admin
+2026-10-01 13:01:04 - INFO - Login attempt for username: admin
+2026-10-01 13:01:04 - INFO - Successful login for user: admin
+2026-10-01 13:03:00 - INFO - Login attempt for username: admin
+2026-10-01 13:03:00 - INFO - Successful login for user: admin
+2026-10-01 13:03:23 - INFO - Login attempt for username: user1
+2026-10-01 13:03:23 - INFO - Successful login for user: user1
+2026-10-01 13:03:26 - INFO - Login attempt for username: user1
+2026-10-01 13:03:26 - INFO - Successful login for user: user1
+2026-10-01 13:08:07 - INFO - Login attempt for username: user1
+2026-10-01 13:08:07 - INFO - Successful login for user: user1
+2026-10-01 13:08:13 - INFO - Login attempt for username: user1
+2026-10-01 13:08:13 - INFO - Successful login for user: user1
+2026-10-01 13:08:29 - INFO - Login attempt for username: admin
+2026-10-01 13:08:29 - INFO - Successful login for user: admin
+2026-10-01 13:09:28 - INFO - Login attempt for username: admin
+2026-10-01 13:09:28 - INFO - Successful login for user: admin
+2026-10-01 13:10:00 - INFO - Login attempt for username: admin
+2026-10-01 13:10:00 - INFO - Successful login for user: admin
+2026-10-01 13:11:09 - INFO - Login attempt for username: admin
+2026-10-01 13:11:09 - INFO - Successful login for user: admin
+2026-10-01 13:15:39 - INFO - Aplikasi dimulai
+2026-10-01 13:15:55 - INFO - Login attempt for username: user1
+2026-10-01 13:15:55 - INFO - Successful login for user: user1
+2026-10-01 13:16:24 - INFO - Data submitted by user: user1 - NIM: 12345678
+2026-10-01 13:17:52 - INFO - Aplikasi dimulai
+2026-10-01 13:17:57 - INFO - Login attempt for username: admin
+2026-10-01 13:17:57 - INFO - Successful login for user: admin
+2026-10-01 13:18:34 - INFO - Data submitted by user: admin - NIM: 12345678
+2026-10-01 13:19:59 - INFO - Aplikasi dimulai
+2026-10-01 13:20:07 - INFO - Login attempt for username: admin
+2026-10-01 13:20:07 - INFO - Successful login for user: admin
+2026-10-01 13:20:43 - INFO - Data submitted by user: admin - NIM: 28282828
+2026-10-01 13:21:05 - INFO - Application closed by user: admin

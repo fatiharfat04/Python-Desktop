@@ -1,0 +1,11 @@
+Data disimpan oleh: admin
+Waktu penyimpanan: 2026-10-01 13:20:48
+--------------------------------------------------
+BIODATA TERSIMPAN:
+Diinput oleh: admin
+
+Nama: admin nih boss
+NIM: 28282828
+Jurusan: kok
+Alamat: lpg
+Jenis Kelamin: Pria
