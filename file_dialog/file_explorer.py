@@ -108,7 +108,7 @@ class FileExplorer:
             text="🔄 Refresh",
             font=("Arial", 10),
             bg="lightcyan",
-            # command=self.refresh_view,
+            command=self.refresh_view,
             width=10
         )
         btn_refresh.pack(side=tk.LEFT, padx=2, pady=2)
