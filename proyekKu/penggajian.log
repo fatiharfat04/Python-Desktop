@@ -1,0 +1,122 @@
+2026-11-04 13:25:10,133 ERROR Operasi database gagal
+Traceback (most recent call last):
+  File "D:\Coding\Desktop-matkul\proyekKu\ui_common.py", line 11, in aman
+    return aksi()
+           ^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\views\karyawan.py", line 24, in proses
+    rows = self.repo.semua(self.cari.get().strip())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\repository.py", line 10, in semua
+    cur.execute(sql + " ORDER BY nama,id", (cari,cari))
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\cursor.py", line 416, in execute
+    self._connection.cmd_query(
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\_decorating.py", line 89, in handle_cnx_method
+    raise err
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\_decorating.py", line 85, in handle_cnx_method
+    return cnx_method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\connection.py", line 984, in cmd_query
+    result = self._handle_result(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\_decorating.py", line 89, in handle_cnx_method
+    raise err
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\_decorating.py", line 85, in handle_cnx_method
+    return cnx_method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\connection.py", line 745, in _handle_result
+    raise get_exception(packet)
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'db_penggajian_modul5.karyawan' doesn't exist
+2026-11-04 13:25:48,435 ERROR Operasi database gagal
+Traceback (most recent call last):
+  File "D:\Coding\Desktop-matkul\proyekKu\ui_common.py", line 11, in aman
+    return aksi()
+           ^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\views\karyawan.py", line 55, in proses
+    self.repo.simpan(Karyawan.dari_form(data),row.get("id"))
+  File "D:\Coding\Desktop-matkul\proyekKu\repository.py", line 18, in simpan
+    cur.execute("INSERT INTO karyawan(nik,nama,jabatan,gaji_pokok,tunjangan,aktif) VALUES(%s,%s,%s,%s,%s,%s)",data)
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\cursor.py", line 416, in execute
+    self._connection.cmd_query(
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\_decorating.py", line 89, in handle_cnx_method
+    raise err
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\_decorating.py", line 85, in handle_cnx_method
+    return cnx_method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\connection.py", line 984, in cmd_query
+    result = self._handle_result(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\_decorating.py", line 89, in handle_cnx_method
+    raise err
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\_decorating.py", line 85, in handle_cnx_method
+    return cnx_method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\connection.py", line 745, in _handle_result
+    raise get_exception(packet)
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'db_penggajian_modul5.karyawan' doesn't exist
+2026-11-04 13:25:56,013 ERROR Operasi database gagal
+Traceback (most recent call last):
+  File "D:\Coding\Desktop-matkul\proyekKu\ui_common.py", line 11, in aman
+    return aksi()
+           ^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\views\karyawan.py", line 55, in proses
+    self.repo.simpan(Karyawan.dari_form(data),row.get("id"))
+  File "D:\Coding\Desktop-matkul\proyekKu\repository.py", line 18, in simpan
+    cur.execute("INSERT INTO karyawan(nik,nama,jabatan,gaji_pokok,tunjangan,aktif) VALUES(%s,%s,%s,%s,%s,%s)",data)
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\cursor.py", line 416, in execute
+    self._connection.cmd_query(
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\_decorating.py", line 89, in handle_cnx_method
+    raise err
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\_decorating.py", line 85, in handle_cnx_method
+    return cnx_method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\connection.py", line 984, in cmd_query
+    result = self._handle_result(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\_decorating.py", line 89, in handle_cnx_method
+    raise err
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\_decorating.py", line 85, in handle_cnx_method
+    return cnx_method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\connection.py", line 745, in _handle_result
+    raise get_exception(packet)
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'db_penggajian_modul5.karyawan' doesn't exist
+2026-11-04 13:26:03,888 ERROR Operasi database gagal
+Traceback (most recent call last):
+  File "D:\Coding\Desktop-matkul\proyekKu\ui_common.py", line 11, in aman
+    return aksi()
+           ^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\views\karyawan.py", line 24, in proses
+    rows = self.repo.semua(self.cari.get().strip())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\repository.py", line 10, in semua
+    cur.execute(sql + " ORDER BY nama,id", (cari,cari))
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\cursor.py", line 416, in execute
+    self._connection.cmd_query(
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\_decorating.py", line 89, in handle_cnx_method
+    raise err
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\_decorating.py", line 85, in handle_cnx_method
+    return cnx_method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\connection.py", line 984, in cmd_query
+    result = self._handle_result(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\_decorating.py", line 89, in handle_cnx_method
+    raise err
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\_decorating.py", line 85, in handle_cnx_method
+    return cnx_method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\Desktop-matkul\proyekKu\venv\Lib\site-packages\mysql\connector\connection.py", line 745, in _handle_result
+    raise get_exception(packet)
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'db_penggajian_modul5.karyawan' doesn't exist
