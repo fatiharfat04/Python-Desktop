@@ -1,5 +1,6 @@
 from mysql.connector import IntegrityError
 from database import koneksi
+from model import hitung_gaji, periode_valid
 
 class KaryawanRepository:
     def semua(self, cari="", hanya_aktif=False):
@@ -38,3 +39,42 @@ class KaryawanRepository:
             if exc.errno == 1451:
                 raise ValueError("Karyawan memiliki riwayat gaji. Ubah status menjadi nonaktif, jangan dihapus.") from exc
             raise
+
+class GajiRepository:
+    def simpan(self, id_karyawan, periode, jam, tarif, potongan):
+        periode = periode_valid(periode)
+        try:
+            with koneksi() as db, db.cursor(dictionary=True) as cur:
+                cur.execute("SELECT * FROM karyawan WHERE id=%s FOR UPDATE",(id_karyawan,))
+                k = cur.fetchone()
+                if k is None or k["aktif"] != 1:
+                    raise ValueError("Karyawan tidak ada atau sudah nonaktif.")
+                hasil = hitung_gaji(k["gaji_pokok"],k["tunjangan"],jam,tarif,potongan)
+                values = (id_karyawan,periode,k["nik"],k["nama"],k["jabatan"],
+                          hasil["gaji_pokok"],hasil["tunjangan"],hasil["jam_lembur"],
+                          hasil["tarif_lembur"],hasil["uang_lembur"],hasil["potongan"],
+                          hasil["bruto"],hasil["netto"])
+                cur.execute("""INSERT INTO penggajian
+                    (karyawan_id,periode,nik,nama,jabatan,gaji_pokok,tunjangan,
+                     jam_lembur,tarif_lembur,uang_lembur,potongan,bruto,netto)
+                    VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)""",values)
+                id_gaji = cur.lastrowid
+                db.commit()
+                return id_gaji
+        except IntegrityError as exc:
+            if exc.errno == 1062:
+                raise ValueError("Gaji karyawan pada periode ini sudah tersimpan.") from exc
+            raise
+
+    def semua(self, periode):
+        periode = periode_valid(periode)
+        with koneksi() as db, db.cursor(dictionary=True) as cur:
+            cur.execute("SELECT * FROM penggajian WHERE periode=%s ORDER BY nama,id",(periode,))
+            return cur.fetchall()
+
+    def ringkasan(self, periode):
+        with koneksi() as db, db.cursor(dictionary=True) as cur:
+            cur.execute("SELECT COUNT(*) AS total FROM karyawan WHERE aktif=1")
+            total = cur.fetchone()["total"]
+            cur.execute("SELECT COUNT(*) AS slip,COALESCE(SUM(netto),0) AS netto FROM penggajian WHERE periode=%s",(periode_valid(periode),))
+            return dict(aktif=total, **cur.fetchone())
